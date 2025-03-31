@@ -2,20 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Songs</title> 
+    <div th:insert="fragment :: bootstrapCss"></div>
   </head>
   <body>
-    <div>
+    <div class="container">
+      <div th:insert="fragment :: navbar"></div>
+      
       <h1>Le migliori canzoni</h1>
-    </div> 
+      <div>
+        <ul>
+          <li th:each = "song : ${song}">
+            <span th:text = "|Id: ${song.id} - Nome: ${song.titolo}|"></span>
+          </li>
+        </ul>
+      </div>
     <div>
-      <ul>
-        <li th:each = "song : ${song}">
-          <span th:text = "|Id: ${song.id} - Nome: ${song.titolo}|"></span>
-        </li>
-      </ul>
-    </div>
+    <!--Stringa CANZONI
     <div>
       <p th:text ="|La lista delle canzoni è ${stringSong}|"></p>
     </div>
+    -->
+    <div th:insert="fragment :: bootstrapJS"></div>
   </body>
 </html>

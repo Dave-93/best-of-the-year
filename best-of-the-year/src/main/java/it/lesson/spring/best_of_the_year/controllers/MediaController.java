@@ -37,14 +37,14 @@ public class MediaController {
     public String movie(Model model) {
         List<Movie> film = getBestMovies();
         model.addAttribute("film", film);
-
+        /*Stringa FILM
         String movies = "";
         for(Movie m : film){
             movies += m.getTitolo()+", ";
         }
         movies = movies.substring(0, movies.length()-2);
         model.addAttribute("stringFilm", movies);
-
+        */
         return "movie";
     }
     //Ricerca FILM
@@ -74,14 +74,14 @@ public class MediaController {
     public String song(Model model) {
         List<Song> song = getBestSongs();
         model.addAttribute("song", song);
-
+        /*Stringa CANZONI
         String songs = "";
         for(Song s : song){
             songs += s.getTitolo()+", ";
         }
         songs = songs.substring(0, songs.length()-2);
         model.addAttribute("stringSong", songs);
-
+        */
         return "song";
     }
     //Ricerca CANZONI

@@ -2,14 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Search Songs</title> 
+        <div th:insert="fragment :: bootstrapCss"></div>
     </head>
     <body>
-        <h1>Canzone cercata</h1>
-        <div th:if = "${song != null}">
-            <p th:text = "|La canzone cercata è ${song.titolo}|"></p>
+        <div class="container">
+            <div th:insert="fragment :: navbar"></div>
+            
+            <h1>La canzone cercata</h1>
+            <div th:if = "${song != null}">
+                <p th:text = "|La canzone cercata è ${song.titolo}|"></p>
+            </div>
+            <div th:if = "${song == null}">
+                <p th:text = "'La canzone cercata non è presente!'"></p>
+            </div>
         </div>
-        <div th:if = "${song == null}">
-            <p th:text = "'La canzone cercata non è presente!'"></p>
-        </div>
+
+        <div th:insert="fragment :: bootstrapJS"></div>
     </body>
 </html>

@@ -2,20 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Movies</title> 
+    <div th:insert="fragment :: bootstrapCss"></div>
   </head>
   <body>
-    <div>
-      <h1>I film migliori</h1>
-    </div> 
-    <div>
-      <ul>
-        <li th:each = "film : ${film}">
-          <span th:text = "|Id: ${film.id} - Nome: ${film.titolo}|"></span>
-        </li>
-      </ul>
+    <div class="container">
+      <div th:insert="fragment :: navbar"></div>
+      
+      <h1>I migliori film</h1>
+      <div>
+        <ul>
+          <li th:each = "film : ${film}">
+            <span th:text = "|Id: ${film.id} - Nome: ${film.titolo}|"></span>
+          </li>
+        </ul>
+      </div>
+      <!--Stringa FILM
+      <div>
+        <p th:text ="|La lista dei film è ${stringFilm}|"></p>
+      </div>
+      -->
     </div>
-    <div>
-      <p th:text ="|La lista dei film è ${stringFilm}|"></p>
-    </div>
+    <div th:insert="fragment :: bootstrapJS"></div>
   </body>
 </html>
