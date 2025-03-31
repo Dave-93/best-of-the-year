@@ -8,17 +8,28 @@
     <div class="container">
       <div th:insert="fragment :: navbar"></div>
       
-      <h1>I migliori film</h1>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h1>Best Movies</h1>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item" th:each = "film : ${film}">
+              <span th:text = "${film.titolo}"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--Stringa FILM
+      <div>
+        <p th:text ="|La lista dei film è ${stringFilm}|"></p>
+      </div>
+      -->
+      <!--Step2
       <div>
         <ul>
           <li th:each = "film : ${film}">
             <span th:text = "|Id: ${film.id} - Nome: ${film.titolo}|"></span>
           </li>
         </ul>
-      </div>
-      <!--Stringa FILM
-      <div>
-        <p th:text ="|La lista dei film è ${stringFilm}|"></p>
       </div>
       -->
     </div>

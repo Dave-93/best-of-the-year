@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import it.lesson.spring.best_of_the_year.models.Movie;
 import it.lesson.spring.best_of_the_year.models.Song;
@@ -17,9 +16,15 @@ import it.lesson.spring.best_of_the_year.models.Song;
 @RequestMapping("/")
 public class MediaController {
 
+    /* Step 1 Richiesta NOME
     @GetMapping
     public String bestOfTheYear(@RequestParam String name, Model model) {
         model.addAttribute("name", name);
+        return "bestOfTheYear";
+    }*/
+
+    @GetMapping
+    public String bestOfTheYear(Model model) {
         return "bestOfTheYear";
     }
     
