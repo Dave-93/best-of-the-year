@@ -8,13 +8,12 @@
     <div class="container">
       <div th:insert="fragment :: navbar"></div>
       
-      <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex flex-column align-items-center">
         <h1>Best Songs</h1>
         <div>
           <ul class="list-group">
             <li class="list-group-item" th:each = "song : ${song}">
-              <span th:text = "${song.titolo}"></span>
-            </li>
+              <a th:href="@{/songs/{id}(id=${song.id})}" th:text = "${song.titolo}" class="text-decoration-none"></a>            </li>
           </ul>
         </div>
       </div>

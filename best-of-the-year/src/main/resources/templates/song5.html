@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Jump</title> 
+        <div th:insert="fragment :: bootstrapCss"></div>
+    </head>
+    <body>
+        <div class="container">
+            <div th:insert="fragment :: navbar"></div>
+            <div class="d-flex flex-column align-items-center">
+                <h1 th:text = "|Best of by ${song.titolo}|" class="text-center"></h1>
+                <div class="w-80">
+                    <img th:src ="@{/img/song/5.jpg}" class="img-fluid"/>
+                </div>
+                <div>
+                    <p>I get up, and nothin' gets me down
+                        You got it tough
+                        I've seen the toughest around
+                        And I know, baby, just how you feel
+                        You got to roll with the punches
+                        And get to what's real
+                        Ah, can't you see me standin' here?
+                        I got my back against the record machine
+                        I ain't the worst that you've seen
+                        Ah, can't you see what I mean?
+                        Ah, might as well jump (jump!)
+                        Might as well jump
+                        Go ahead and jump (jump!)
+                        Go ahead and jump
+                        Ah-oh, hey you!
+                        Who said that?
+                        Baby, how you been?
+                        You say you don't know
+                        You won't know until you begin
+                        So, can't you see me standing here?
+                        I got my back against the record machine
+                        I ain't the worst that you've seen
+                        Ah, can't you see what I mean?
+                        Ah, might as well jump (jump!)
+                        Go ahead and jump
+                        Might as well jump (jump!)
+                        Go ahead and jump
+                        Jump!
+                        Might as well jump (jump!)
+                        Go ahead and jump
+                        Get it and jump (jump!)
+                        Go ahead and jump
+                        Jump!
+                        Jump!
+                        Jump!
+                        Jump!
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div th:insert="fragment :: bootstrapJS"></div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Crazy Train</title> 
+        <div th:insert="fragment :: bootstrapCss"></div>
+    </head>
+    <body>
+        <div class="container">
+            <div th:insert="fragment :: navbar"></div>
+            <div class="d-flex flex-column align-items-center">
+                <h1 th:text = "|Best of by ${song.titolo}|" class="text-center"></h1>
+                <div class="w-80">
+                    <img th:src ="@{/img/song/2.jpg}" class="img-fluid"/>
+                </div>
+                <div>
+                    <p>All aboard ha ha ha ha ha ha ha
+                        Crazy, but that's how it goes
+                        Millions of people living as foes
+                        Maybe it's not too late
+                        To learn how to love
+                        And forget how to hate
+                        Mental wounds not healing
+                        Life's a bitter shame
+                        I'm going off the rails on a crazy train
+                        I'm going off the rails on a crazy train
+                        Let's go
+                        I've listened to preachers
+                        I've listened to fools
+                        I've watched all the dropouts
+                        Who make their own rules
+                        One person conditioned to rule and control
+                        The media sells it and you live the role
+                        Mental wounds still screaming
+                        Driving me insane
+                        I'm going off the rails on a crazy train
+                        I'm going off the rails on a crazy train
+                        I know that things are going wrong for me
+                        You gotta listen to my words, yeah
+                        Heirs of a cold war
+                        That's what we've become
+                        Inheriting troubles I'm mentally numb
+                        Crazy, I just cannot bear
+                        I'm living with something' that just isn't fair
+                        Mental wounds not healing
+                        Who and what's to blame
+                        I'm going off the rails on a crazy train
+                        I'm going off the rails on a crazy train
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div th:insert="fragment :: bootstrapJS"></div>
+    </body>
+</html>

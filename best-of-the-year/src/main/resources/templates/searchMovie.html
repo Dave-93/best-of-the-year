@@ -7,13 +7,21 @@
     <body>
         <div class="container">
             <div th:insert="fragment :: navbar"></div>
-
-            <h1>Il film cercato</h1>
-            <div th:if = "${film != null}">
-                <p th:text = "|Il film cercato è ${film.titolo}|"></p>
-            </div>
-            <div th:if = "${film == null}">
-                <p th:text = "'Il film cercato non è presente!'"></p>
+            
+            <div class="d-flex flex-column align-items-center">
+                <div th:if = "${film != null}">
+                    <h1 th:text = "|Best of by ${film.titolo}|" class="text-center"></h1>
+                    <div class="w-80">
+                        <img th:src ="@{/img/film/{id}.jpg(id=${film.id})}" class="img-fluid"/>
+                    </div>
+                </div>
+                <div th:if = "${film == null}">
+                    <p th:text = "'Il film cercato non è presente!'"></p>
+                </div>
+                <div class="text-center">
+                    <p th:text ="@{/files/{id}.txt(id=${film.id})}"></p>
+<!--                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto esse similique obcaecati laboriosam exercitationem culpa necessitatibus, consequuntur repellat. Nostrum at labore dicta laudantium consequatur quam, distinctio voluptatum iure debitis!</p>
+ -->             </div>
             </div>
         </div>
 

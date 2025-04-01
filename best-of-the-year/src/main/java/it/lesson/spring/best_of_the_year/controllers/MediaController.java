@@ -93,12 +93,20 @@ public class MediaController {
     @GetMapping("/songs/{id}")
     public String searchSong(@PathVariable("id") int id, Model model) {
         List<Song> song = getBestSongs();
+        Song selectedSong = null;
         for(Song s : song){
             if(s.getId() == id){
-                model.addAttribute("song", s);
+                //model.addAttribute("song", s);
+                selectedSong = s;
                 break;
             }
         }
-        return "searchSong";
+        if(selectedSong != null){
+            model.addAttribute("song", selectedSong);
+            return "song" + id;
+        }
+        else{
+            return "searchSong";
+        }
     }
 }
