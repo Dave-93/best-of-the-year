@@ -8,12 +8,14 @@
         <div class="container">
             <div th:insert="fragment :: navbar"></div>
             
-            <h1>La canzone cercata</h1>
-            <div th:if = "${song != null}">
-                <p th:text = "|La canzone cercata è ${song.titolo}|"></p>
-            </div>
-            <div th:if = "${song == null}">
-                <p th:text = "'La canzone cercata non è presente!'"></p>
+            <div class="d-flex flex-column align-items-center">
+                <h1>La canzone cercata</h1>
+                <div th:if = "${song != null}">
+                    <p th:text = "|La canzone cercata è ${song.titolo}|"></p>
+                </div>
+                <div th:if = "${song == null}">
+                    <p th:text = "'La canzone cercata non è presente!'"></p>
+                </div>
             </div>
         </div>
 

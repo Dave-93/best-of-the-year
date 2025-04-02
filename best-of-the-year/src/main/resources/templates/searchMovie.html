@@ -14,14 +14,28 @@
                     <div class="w-80">
                         <img th:src ="@{/img/film/{id}.jpg(id=${film.id})}" class="img-fluid"/>
                     </div>
+                    <div th:if ="${film.id == 1}" class="text-center">
+                        <p>Il Signore degli Anelli narra della missione di nove personaggi che compongono la Compagnia dell'Anello, partiti per distruggere l'Anello del Potere, il più potente tra gli anelli destinati alle varie razze della terra di mezzo, nonché un'arma che potrebbe rendere invincibile il suo malvagio creatore Sauron se tornasse nelle sue mani, dandogli il potere di dominare tutta la Terra di Mezzo.</p>
+                    </div>
+                    <div th:if ="${film.id == 5}" class="text-center">
+                        <p>Si narrano le vicende di Bilbo Baggins, che, insieme allo stregone Gandalf e a tredici nani, guidati da Thorin Scudodiquercia, viene coinvolto in un’epica impresa per riconquistare il perduto regno di Erebor strappato ai Nani dal temibile Drago Smaug. Il loro viaggio li condurrà nelle terre selvagge, in paesi inospitali e pericolosi abitati da Goblin, Orchi e terribili Mannari, oltre a una misteriosa e sinistra figura nota come il Negromante. Lungo il cammino, Bilbo Baggins non solo scopre di avere capacità e ingegno tali da soprendere perfino lui, ma entra anche in possesso di un prezioso anello legato al destino della Terra di Mezzo, con conseguenze che non può ancora immaginare.</p>
+                    </div>
+                    <div th:if ="${film.id == 6}" class="text-center">
+                        <p>Peter Parker è un giovane studente che vive a Queens, New York. Rimasto orfano da bambino, è cresciuto con zia May e zio Ben e per guadagnare qualche soldo lavora come fotografo per il Daily Bugle, un quotidiano locale diretto da J.J. Jameson. E' segretamente innamorato di Mary Jane Watson, sua compagna di università. Un giorno, durante una visita al 'Columbia Genetics Research Institute', Peter assiste ad alcuni esperimenti scientifici sui ragni e viene morso accidentalmente da uno di questi. Nel giro di poco tempo si rende conto di essere in possesso di strani poteri: riesce ad arrampicarsi sui muri, ha una forza straordinaria ed ha sviluppato un potente 'senso di ragno' che lo avverte del pericolo. Inizialmente cerca di sfruttare questa sua nuova forza per guadagnare dei soldi, ma dopo che suo zio Ben viene ucciso, decide di sfruttare i suoi poteri per sconfiggere il male. Tra i nemici da combattere c'è Green Goblin, trasformazione subita dall'uomo d'affari Norman Osborn (padre di Harry, il miglior amico di Peter) dopo l'esposizione alle esalazioni di un gas nervino sperimentale, che lo ha reso più forte e dotato di un'intelligenza superiore, ma che lo ha anche reso schizofrenico.</p>
+                    </div>
+                    <div th:if ="${film.id == 2}" class="text-center">
+                        <p>Anno 180 dopo Cristo. In terra di Germania l'esercito romano dopo una poderosa offensiva sconfigge i ribelli tedeschi e ristabilisce l'ordine. Artefice della vittoria è il generale Maximus. A lui, che molto ammira, l'imperatore Marco Aurelio confida che passerà il trono alla propria morte, scavalcando quindi Commodo, figlio inetto e ribelle ancorché legittimo erede. Venuto a sapere la notizia, Commodo attua un rapido e cruento piano: strozza il genitore, si prende il titolo e ordina l'eliminazione immediata di Maximus. Costui sfugge all'agguato e riesce, sebbene ferito, ad arrivare alle porte di Roma. Qui scopre che, per ordine dell'imperatore, i soldati gli hanno orribilmente ucciso la moglie e il figlioletto. Persi i sensi per la stanchezza e il dolore, Maximus si ritrova in Africa, al mercato degli schiavi. Messosi in evidenza per astuzia e coraggio, viene acquistato insieme ad altri da Proximus, un ex-schiavo liberato, che ora organizza gli spettacoli al Colosseo. Maximus riesce in questo modo a tornare a Roma e a preparare la vendetta. Nell'arena, davanti all'imperatore, supera avversari e pericoli a raffica, il popolo lo acclama e lo elegge a proprio idolo. Fattosi riconoscere, rivolge parole e gesti provocatori all'imperatore che non può eliminarlo per non deludere i romani che vogliono vederlo combattere. Con l'appoggio di un senatore e di Lucilla, sorella di Commodo, Maximus cerca di promuovere una congiura. Ma le cose vanno male e Commodo fa eliminare tutti, tranne Lucilla, da cui è fortemente attratto. Ferito, Maximus entra di nuovo nell'arena. E allora anche Commodo scende sul terreno, sicuro di poterlo facilmente eliminare. Maximus trova però nuove energie, e uccide Commodo prima di cadere a sua volta ormai privo di vita. Così può finalmente ricongiungersi nell'aldilà con la moglie e il figlioletto.</p>
+                    </div>
                 </div>
                 <div th:if = "${film == null}">
                     <p th:text = "'Il film cercato non è presente!'"></p>
                 </div>
+                <!--   
                 <div class="text-center">
                     <p th:text ="@{/files/{id}.txt(id=${film.id})}"></p>
-<!--                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto esse similique obcaecati laboriosam exercitationem culpa necessitatibus, consequuntur repellat. Nostrum at labore dicta laudantium consequatur quam, distinctio voluptatum iure debitis!</p>
- -->             </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto esse similique obcaecati laboriosam exercitationem culpa necessitatibus, consequuntur repellat. Nostrum at labore dicta laudantium consequatur quam, distinctio voluptatum iure debitis!</p>
+                </div>
+                 --> 
             </div>
         </div>
 
